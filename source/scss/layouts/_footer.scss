@@ -1,0 +1,39 @@
+.footer{
+    @include absolute(bottom 0 left 0);
+    width: 100%;
+    padding: 30px 60px;
+    z-index: 100;
+}
+.footer-content{
+    @include clearfix;
+    ul>li{
+        display: inline-block;
+    }
+    a{
+        @include font-size(14px);
+    }
+}
+.social{
+    @extend %float-items;
+    @extend %left-align
+}
+.lang{
+    @extend %float-items;
+    @extend %right-align;
+}
+.social{
+    li{
+        margin-right: 25px;
+    }
+}
+.lang{
+    li{
+        margin-left: 10px;
+        &:first-child:after{
+            content: "|";
+            @extend %black-color;
+            display: inline-block;
+            margin-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.header{
+    @include absolute(top 0 left 0);
+    width: 100%;
+    padding: 30px 60px;
+    z-index: 100;
+}
+.header-content{
+    @include clearfix;
+    position: relative;
+}
+.brand{
+    @include centerer(true, false);
+    >h1{
+        display: inline-block;
+        width: 75px;
+        font-weight: 500;
+    }
+}
+.nav{
+    @extend %float-items;
+    @extend %left-align
+}
+.head-icons{
+    @extend %float-items;
+    @extend %right-align;
+}
+.burger{
+    display: inline-block;
+    cursor: pointer;
+}
+.burger-text{
+    display: inline-block;
+    @include font-size(16px);
+    color: $black;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+#profile,
+#shop{
+    @include size(20px);
+    margin-left: 15px;
+    fill: $black;
+}

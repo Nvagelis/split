@@ -1,0 +1,51 @@
+.slide{
+    @include abs-pos;
+    @include full-screen;
+}
+.img,
+.text{
+    @include size(50%, 100%);
+    @include absolute(top 0);
+}
+.slide{
+    &:nth-child(odd){
+        .text{
+            transform:translateY(100%);
+        }
+        .img{
+            margin-left:50%;
+            transform:translateY(-100%);
+        }
+    }
+    &:nth-child(even){
+        .text{
+            margin-left:50%;
+            transform:translateY(-100%);
+        }
+        .img{
+            transform:translateY(100%);
+        }
+    }
+}
+.slide.active .text, .slide.active .img {
+    transform: translateY(0);
+    z-index: 10;
+}
+
+.img{
+    @extend %bg-image;
+}
+
+.text{
+    @include full-screen;
+    display: table;
+    padding: 30px 10% 0 12%;
+    display: flex;
+    align-items: center;
+}
+.text-content{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+

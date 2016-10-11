@@ -1,0 +1,36 @@
+//colors
+$white: #fff;
+
+$light-black: #666;
+$black: #000;
+
+$light-grey: #EDF3F3;
+$grey: #ccc;
+$dark-grey: #AEACAB;
+
+$red: #d02e2e;
+$yellow: #ffcb01;
+
+//text colors
+$text-color: $dark-grey;
+$header-color: $black;
+
+//link color
+$link-color: $black;
+$link-hover-color: $light-black;
+
+//background color
+$body-bg: $white;
+
+// Typography
+$poppins: 'Poppins', sans-serif;
+
+$font-family: $poppins;
+
+$font-size: 16px;
+$line-height-base: 1;
+$font-weight: 300;
+
+$buttons: (
+    'button' : ('color': $white, 'bg-color': $red),
+);

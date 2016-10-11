@@ -1,0 +1,16 @@
+@function calculateRem($size) {
+    $remSize: $size / 10px;
+    @return $remSize * 1rem;
+}
+@function calculateEm($size){
+    $emSize: $size / $font-size;
+    @return $emSize * 1em;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}

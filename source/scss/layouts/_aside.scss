@@ -1,0 +1,59 @@
+.controls{
+    @include centerer(false, true);
+    @include size(190px);
+    z-index: 100;
+    .view{
+        @include full-screen;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.pagination{
+    @include full-screen;
+    li{
+        display: block;
+        @include absolute(top 0 left 0);
+        @include full-screen;
+        @include font-size(180px);
+        @extend %weight-700;
+        color: $light-grey;
+        margin-left: -35%;
+    }
+}
+@for $i from 1 through 5{
+    .pagination{
+        li:nth-child(#{$i}){
+            transform: translate(0, 100% * ($i - 1));
+        }
+    }
+}
+
+.arrows{
+    @include positioning($top: 50%, $right: 0, $x: 0, $y: -50%);
+    z-index: 5;
+    
+}
+.prev,.next{
+    @include size(30px);
+    margin: 10px 30px;
+    >a{
+        @include link-block;
+    }
+}
+#arrow-up,
+#arrow-down{
+    @include size(30px);
+}
+#arrow-up{
+    transform: rotate(180deg);
+}
+.diveder{
+    @include line(30px);
+    margin: 0 30px;
+}
+.hide{
+    @include opacity(.2);
+    >a{
+        cursor: default;
+    }
+}

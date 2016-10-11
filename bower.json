@@ -1,0 +1,24 @@
+{
+  "name": "build",
+  "description": "maim build",
+  "main": "index.js",
+  "authors": [
+    "Nvagelis"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "duild",
+    "system"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.3"
+  }
+}

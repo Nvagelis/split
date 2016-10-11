@@ -1,0 +1,16 @@
+@mixin make-buttons{
+    @each $class, $properties in $buttons {
+        .#{$class} {
+            color: map-deep-get($buttons, $class, 'color');
+            background-color: map-deep-get($buttons, $class, 'bg-color');
+            &:focus, 
+            &:hover {
+                color: map-deep-get($buttons, $class, 'bg-color');
+                background-color: map-deep-get($buttons, $class, 'color');
+            }    
+        }
+    }
+}
+
+
+

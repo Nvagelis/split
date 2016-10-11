@@ -1,0 +1,6 @@
+@mixin bg-image ($img, $posx:50%, $posy:50%){
+    background-image: $img;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: $posx $posy;
+}

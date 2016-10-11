@@ -1,0 +1,53 @@
+@mixin abs-pos($pos:absolute){
+    position: $pos;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin position($position, $args) {
+    @each $o in top right bottom left {
+        $i: index($args, $o);
+
+        @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number  {
+            #{$o}: nth($args, $i + 1);
+        }
+    }
+    position: unquote($position);
+}
+@mixin absolute($args) {
+    @include position("absolute", $args);
+}
+
+@mixin fixed($args) {
+    @include position("fixed", $args);
+}
+
+@mixin relative($args) {
+    @include position("relative", $args);
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    } @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@mixin positioning($position: absolute, $top: null, $right: null, $bottom: null, $left: null, $x: null, $y: null){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform: translate($x, $y); 
+}

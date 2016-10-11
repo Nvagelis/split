@@ -1,0 +1,8 @@
+html, body{
+    @include full-screen;
+}
+.wrapper{
+    @include full-screen;
+    @include init;
+}
+

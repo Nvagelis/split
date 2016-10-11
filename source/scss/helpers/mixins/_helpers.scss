@@ -1,0 +1,33 @@
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+@mixin full-screen{
+    @extend %full-screen;
+}
+@mixin img-block{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+@mixin link-block{
+    display: block;
+    @extend %full-screen;
+}
+@mixin init{
+    @extend %init;
+}
+@mixin line($width:20px){
+    @include size($width, 2px);
+    background-color: $black;
+}

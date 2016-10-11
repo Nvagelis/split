@@ -1,0 +1,36 @@
+//healpers
+@import "helpers/variables-custom";
+@import "helpers/functions";
+@import "helpers/mixins";
+
+//  base
+@import "base/resets";
+@import "base/fonts";
+@import "base/typography";
+
+@import "helpers/placeholders";
+
+// Layouts
+@import "layouts/scaffolding";
+@import "layouts/main";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/slider";
+@import "layouts/aside";
+
+//components
+@import "components/text";
+@import "components/mini-slider";
+@import "components/buttons";
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+.star-rate{
+    margin-top: 40px;
+}
+.star-title{
+    background-color: $white;
+    background-image: url(../images/rate-bg.jpg);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 40px 42px;
+    
+    @include font-size(12px);
+    @extend %weight-500;
+    @extend %black-color;
+    line-height: 42px;
+    padding-left: 50px;
+}
+
+.star-title,
+.stars{
+    display: inline-block;
+}
+.star-title{
+    &:after{
+        content: "";
+        @include line(10px);
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px 0 10px;
+    }
+}
+.stars{
+    svg{
+        @include size(15px);
+        display: inline-block;
+        vertical-align: middle;
+        fill: $yellow;
+    }
+    li{
+        display: inline-block;
+    }
+}
+
+.sl-buttons{
+    margin-top: 30px;
+}
+.sl-prev,
+.sl-next{
+    display: inline-block;
+    svg{
+        @include size(40px);
+        fill: $black;
+    }
+}

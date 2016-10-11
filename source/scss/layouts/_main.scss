@@ -1,0 +1,45 @@
+.main{
+    @include full-screen;
+    @include init;
+}
+.container{
+    @include init;
+    @include full-screen;
+    overflow: hidden;
+}
+.slide{
+    @include abs-pos;
+    @include full-screen;
+}
+.img,
+.text{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+}
+.slide{
+    &:nth-child(odd){
+        .text{
+            transform:translateY(100%);
+        }
+        .img{
+            margin-left:50%;
+            transform:translateY(-100%);
+        }
+    }
+    &:nth-child(even){
+        .text{
+            margin-left:50%;
+            transform:translateY(-100%);
+        }
+        .img{
+            transform:translateY(100%);
+        }
+    }
+}
+
+.slide.active .text, .slide.active .img {
+    transform: translateY(0);
+    z-index: 10;
+}
+

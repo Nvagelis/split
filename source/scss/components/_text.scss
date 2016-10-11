@@ -1,0 +1,139 @@
+.intro{
+    display: block;
+    @include font_size(14px);
+    @extend %black-color;
+    @extend %weight-600;
+    @extend %uppercase;
+    margin-bottom: 85px;
+    width: 50px;
+}
+
+.title{
+    @include font-size(64px);
+    @extend %black-color;
+    @extend %weight-600;
+    margin-bottom: 40px;
+    >span{
+        display: block;
+    }
+}
+.sub-title{
+    display: block;
+    @include font_size(16px);
+    @extend %grey-color;
+    @extend %weight-600;
+    @extend %uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+}
+.excerpt{
+    @include font_size(14px);
+    @extend %grey-color;
+    line-height: 1.5;
+    text-align: justify;
+    max-width: 400px;
+}
+
+
+.post{
+    @include clearfix;
+    margin: 35px 0;
+}
+.date-wrap{
+    @extend %grey-color;
+    width: 20%;
+    float: left;
+    text-align: left;
+}
+.date{
+    @include font-size(32px);
+    @extend %grey-color;
+    @extend %weight-300;
+    display: block;
+    margin-bottom: 7px;
+}
+.month{
+    @include font-size(13px);
+    @extend %grey-color;
+    @extend %weight-300;
+    display: block;
+    text-transform: capitalize;
+}
+
+.post-wrap{
+    width: 80%;
+    float: left;
+}
+.post-title{
+    @include font-size(18px);
+    @extend %black-color;
+    @extend %weight-500;
+    display: block;
+    margin-bottom: 15px;
+    >a{
+        @include link-block;
+        &:hover,
+        &:focus{
+            @extend %black-color;
+            text-decoration: underline;
+        }
+    }
+}
+.breadcrumb{
+    @include clearfix;
+    li{
+        @include font-size(13px);
+        @extend %grey-color;
+        @extend %weight-300;
+        float: left;
+        margin: 0 0.5rem;
+        &:first-child{
+            margin-left: 0;
+        }
+        &:after{
+            content: " / ";
+            @extend %grey-color;
+        }
+    }
+}
+
+.show-all{
+    @include font-size(14px);
+    display: block;
+    margin-top: 85px;
+}
+
+.contact-title{
+    @include font-size(32px);
+    margin-bottom: 35px;
+    >span{
+        color: $grey;
+    }
+}
+
+.email{
+    @include font-size(14px);
+    margin: 45px 0 70px;
+    a{
+        @extend %grey-color;
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+strong{
+    @extend %black-color;
+    @extend %weight-700;
+}
+
+.phone{
+    @include font-size(14px);
+    @extend %black-color;
+    margin: 10px 0;
+    line-height: 18px;
+}
+.phone-num{
+    @include font-size(19px);
+    @extend %black-color;
+    display: block;
+    line-height: 32px;
+}
